@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Alice</td>
+                    <td>alice@email.com</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Bob</td>
+                    <td>bob@email.com</td>
+                    <td>30</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form action="/submit" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+        
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1">
+            <br><br>
+        
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <br><br>
+        
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="ca">Canada</option>
+            </select>
+            <br><br>
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+            <br><br>
+        
+            <input type="checkbox" id="agree" name="agree">
+            <label for="agree">I agree to the terms</label>
+            <br><br>
+        
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

@@ -7,36 +7,40 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="container">
+        <form class="container" action="/submit" method="post">
             <header>SIGN UP</header>
-            <div>
-                <input type="text" name="first_name" placeholder="first name">
-                <input type="text" name="last_name" placeholder="last name">
+    
+            <div class="input-row">
+                <input type="text" name="first_name" placeholder="first name" required>
+                <input type="text" name="last_name" placeholder="last name" required>
             </div>
             
             <div>
-                <input type="text" name="mobile" placeholder="mobile no">
+                <input type="text" name="mobile" placeholder="mobile no" required>
             </div>
-
+    
             <div>
-                <input type="text" name="email" placeholder="email">
+                <input type="email" name="email" placeholder="email" required>
             </div>
-            <div>
-                <input type="text" name="password" placeholder="password">
-                <input type="text" name="password" placeholder="retype password">
+    
+            <div class="input-row">
+                <input type="password" name="password" placeholder="password" required>
+                <input type="password" name="confirm_password" placeholder="retype password" required>
             </div>
-
+    
             <div class="terms">
-                <input type="checkbox" id="agree">
+                <input type="checkbox" id="agree" required>
                 <label for="agree">I Agree</label>
                 <span>Terms Here</span>
             </div>
-
+    
             <div class="buttons">
-                <button>Register</button>
-                <button>Sign in</button>
+                <button type="submit">Register</button>
+                <a href="https://example.com" target="_blank">
+                    <button type="button">Sign in</button>
+                </a>
             </div>
-        </div>
+        </form>
     </body>
     
 </html>
