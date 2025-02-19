@@ -5,40 +5,64 @@ body {
     height: 100vh;
 }
 
-.container {
+.form {
     padding: 20px;
     border: 2px solid black;
     text-align: center;
     border-radius: 8px;
 }
 
-header {
+.form__header {
     margin-bottom: 10px;
+    font-size: 24px;
 }
 
-.container input {
+.form__input {
     box-sizing: border-box;
-}
-
-.container input[name="email"],
-.container input[name="mobile"] {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
     width: 100%;
+    font-size: 16px;
 }
 
-.terms {
+.form__input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form__input-row .form__input {
+    width: 48%;
+}
+
+.form__terms {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
 
-.terms span {
-    margin-left: 40px;
+.form__checkbox {
+    width: 20px;
+    height: 20px;
 }
 
-.buttons {
+/* Element: Buttons */
+.form__buttons {
     display: flex;
-    margin: 10px;
     justify-content: space-between;
-    gap:50px;
+    margin-top: 10px;
+}
+
+.form__button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 0 5px;
 }
