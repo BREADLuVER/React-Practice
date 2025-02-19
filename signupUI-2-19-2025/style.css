@@ -17,7 +17,8 @@ body {
 
 .form__header {
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 
@@ -50,6 +51,7 @@ body {
     align-items: center;
     gap: 10px;
     width: 100%;
+    margin-bottom: 15px;
 }
 
 
@@ -71,8 +73,7 @@ body {
 .form__buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
-    gap: 30px;
+    gap: 20px;
 }
 
 
@@ -97,3 +98,27 @@ body {
     background: rgb(64, 84, 201);
 }
 
+@media (max-width: 600px) {
+    .form {
+        width: 100%;
+        max-width: 80%;
+        padding: 20px;
+    }
+
+    .form__input-row {
+        flex-direction: column;
+    }
+
+    .form__input-row .form__input {
+        width: 100%;
+    }
+
+    .form__buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form__button {
+        width: 100%;
+    }
+}
