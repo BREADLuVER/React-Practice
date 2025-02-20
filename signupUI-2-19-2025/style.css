@@ -100,13 +100,14 @@ body {
 
 @media (max-width: 600px) {
     .form {
-        width: 100%;
-        max-width: 80%;
+        width: 80%;
         padding: 20px;
     }
 
     .form__input-row {
+        display: flex;
         flex-direction: column;
+        gap: 10px;
     }
 
     .form__input-row .form__input {
@@ -114,6 +115,7 @@ body {
     }
 
     .form__buttons {
+        display: flex;
         flex-direction: column;
         gap: 10px;
     }
