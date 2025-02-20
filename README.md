@@ -1,5 +1,5 @@
 ### signup_ui 2/19/2025
-![image](https://github.com/user-attachments/assets/5eb154b4-17a8-4fe7-bbfd-1f52a8b927d8)
+![image](https://github.com/user-attachments/assets/dbe6cc1e-835c-422e-871c-4b17857c7697)
 
 ### signup_ui 2/18/2025
 
