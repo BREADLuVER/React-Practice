@@ -1,0 +1,44 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 50%;
+    border: 2px;
+    justify-content: center; 
+    text-align: center;
+}
+
+/* button {
+    box-shadow: 4px 4px 10px rgba(170, 9, 9, 0.3);
+    border: solid black;
+} */
+
+h2 {
+    color: green;
+}
+
+.warning {
+    color: orange;
+}
+
+#main-header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.container p {
+    font-style: italic;
+}
+
+h1, h2, h3 {
+    font-family: Arial, sans-serif;
+}
+
+input[type="email"] {
+    border: 2px solid yellow;
+}
