@@ -19,5 +19,5 @@ export const useClick = () => {
     if (!context) {
         throw new Error('No context')
     }
-    return context
+    return context;
 }
