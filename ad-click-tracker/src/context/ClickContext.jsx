@@ -1,4 +1,4 @@
-import {createContext, useContext, useState} from 'react';
+import { createContext, useContext, useState } from 'react';
 
 const ClickContext = createContext(undefined);
 
@@ -20,4 +20,4 @@ export const useClick = () => {
         throw new Error('No context')
     }
     return context;
-}
+};

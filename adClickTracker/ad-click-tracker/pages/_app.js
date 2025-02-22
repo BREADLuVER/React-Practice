@@ -8,3 +8,5 @@ function MyApp({Component, pageProps}) {
         </ClickProvider>
     )
 }
+
+export default MyApp;
