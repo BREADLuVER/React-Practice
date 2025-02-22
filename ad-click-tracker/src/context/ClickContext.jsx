@@ -1,23 +1,16 @@
-import { createContext, useContext, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { increment } from '../features/clickSlice';
 
-const ClickContext = createContext(undefined);
+const ClickButton = () => {
+  const dispatch = useDispatch();
+  const clickCount = useSelector((state) => state.clicks.clicks);
 
-export const ClickProvider = ({children}) => {
-    const [clicks, setClicks] = useState(0);
-
-    const addClick = () => setClicks((prev) => prev+1);
-
-    return (
-        <ClickContext.ClickProvider values={{clicks, addClick}}>
-            {children}
-        </ClickContext.ClickProvider>
-    );
+  return (
+    <div>
+      <button onClick={() => dispatch(increment())}>Click Me!</button>
+      <p>Total Clicks: {clickCount}</p>
+    </div>
+  );
 };
 
-export const useClick = () => {
-    const context = useContext(ClickContext);
-    if (!context) {
-        throw new Error('No context')
-    }
-    return context;
-};
+export default ClickButton;
