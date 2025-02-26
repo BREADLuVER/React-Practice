@@ -1,17 +1,29 @@
-import { NewTodoForm } from "./NewTodoForm"
 import "./styles.css"
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 
 export default function App() {
   const [newItem, setNewItem] = useState("")
-  const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState(() => {
+    const savedTodos = localStorage.getItem('todos')
+    return savedTodos ? JSON.parse(savedTodos) : []
+  })
 
-  function addTodo(title) {
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos))
+  }, [todos])
+
+  const inputRef = useRef(null)
+  function addTodo(e) {
+    e.preventDefault()
+    if (newItem.trim() === "") return
+
     setTodos((currentTodos) => {
       return [...currentTodos, 
-        { id:crypto.randomUUID(), title, completed:false},]
+        { id:crypto.randomUUID(), title:newItem, completed:false},]
     })
 
+    setNewItem("")
+    inputRef.current?.focus()
   }
 
   function toggleTodo(id, completed) {
@@ -32,7 +44,20 @@ export default function App() {
   }
   return (
     <>
-      <NewTodoForm onSubmit={addTodo}/>
+      <form onSubmit={addTodo} className="new-item-form">
+        <div className="form-row">
+          <label htmlFor="item">New Item</label>
+          <input
+            ref={inputRef}
+            value={newItem}
+            onChange={(e) => setNewItem(e.target.value)}
+            type="text"
+            id="item"
+          />
+        </div>
+        <button className="btn">Add</button>
+      </form>
+
       <h1 className="header">To Do</h1>
       <ul className="list">
         {todos.length===0 && "No Todos"}
