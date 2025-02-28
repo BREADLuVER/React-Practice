@@ -27,3 +27,15 @@ console.log(fixDivTags("<div><div><div>"));
 
 console.log(fixDivTags("<div><div><p>Hello</p><div><div>")); 
 // Expected Output: "<div></div><p>Hello</p><div></div>"
+
+
+function customForEach(arr, callback) {
+    for (let i = 0; i < arr.length; i++) {
+      callback(arr[i], i); // Passing element, index, and array to callback
+    }
+  }
+
+  
+  
+  // Example usage:
+  customForEach([1, 2, 3], (num,index) => console.log(num * index));
