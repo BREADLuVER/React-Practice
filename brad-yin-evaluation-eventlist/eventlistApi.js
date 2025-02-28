@@ -1,6 +1,6 @@
 const EVENT_LIST_API_URL = "http://localhost:3000/events";
 
-const getEvent = async () => {
+const fetchEvent = async () => {
     const res = await fetch(EVENT_LIST_API_URL);
     return res.json();
 };
@@ -39,4 +39,4 @@ const deleteEvent = async(eventID) => {
     return res.ok;
 }
 
-export { getEvent, addEvent, updateEvent, patchEvent, deleteEvent };
+export { fetchEvent, addEvent, updateEvent, patchEvent, deleteEvent };
