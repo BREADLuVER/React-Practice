@@ -1,7 +1,7 @@
 const EVENT_LIST_API_URL = "http://localhost:3000/events";
 
 const getEvent = async () => {
-    const res = await fetch(EVENT_LIST_API_URL, { method: "GET" });
+    const res = await fetch(EVENT_LIST_API_URL);
     return res.json();
 };
 
