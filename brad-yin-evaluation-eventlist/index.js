@@ -1,4 +1,3 @@
-import { fetchEvent, addEvent, updateEvent, patchEvent, deleteEvent } from "./eventlistApi.js";
 
 class EventlistModel {
     #events;
@@ -31,6 +30,22 @@ class EventlistModel {
 
 class EventlistView {
     constructor() {
-        
+        this.eventsList = document.querySelector(".events-list");
+        this.newEventForm = document.querySelector(".new-event-form");
+        this.newEventTitle = document.querySelector("#new-event-title");
+        this.newEventStart = document.querySelector("#new-event-start");
+        this.newEventEnd = document.querySelector("#new-event-end");
+        this.addEventBtn = document.querySelector(".add-event-btn");
+
+        this.addEventBtn.addEventListener("click", () => {
+            this.newEventForm.style.display = "block";
+        });
+    }
+
+    renderTodos(todos) {
+        this.todosList.innerHTML = "";
+        for (const todo of todos) {
+          this.addTodo(todo);
+        }
     }
 }
