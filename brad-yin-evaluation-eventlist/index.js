@@ -48,4 +48,21 @@ class EventlistView {
           this.addTodo(todo);
         }
     }
+
+    addEvent(newEvent) {
+        const { id, title, startDate, endDate } = newEvent;
+        const eventElement = document.createElement("div");
+        eventElement.classList.add("event");
+        eventElement.id = `event-${id}`;
+        eventElement.innerHTML = `
+            <span class="event__title">${title} (${startDate} - ${endDate})</span>
+            <button class="event__delete">Delete</button>
+        `;
+        this.eventsList.appendChild(eventElement);
+    }
+
+    removeEvent(eventId) {
+        const eventElement = document.getElementById(`event-${eventId}`);
+        if (eventElement) eventElement.remove();
+    }
 }
