@@ -66,3 +66,6 @@ class EventlistView {
         if (eventElement) eventElement.remove();
     }
 }
+
+const eventlistModel = new EventlistModel();
+const eventlistView = new EventlistView();
